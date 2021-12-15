@@ -1,0 +1,53 @@
+[data-aos^=fade][data-aos^=fade] {
+    opacity: 1 ! important;
+    transition-property: opacity,transform;
+}
+
+.background{
+    background-image: url(../images/hero.jpg);
+}
+
+#tns1{
+    transform: translate3d(0%, 0px, 0px);
+     transition-duration: 0s;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+
+} /* this targets the default scrollbar (compulsory) */
+
+
+::-webkit-scrollbar-track {
+     background-color: #4726e1 !important;
+
+} /* the new scrollbar will have a flat appearance with the set background color */
+
+::-webkit-scrollbar-thumb {
+     background-color:#101010; 
+} /* this will style the thumb, ignoring the track */
+
+::-webkit-scrollbar-button {
+     background-color: #101010 !important;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+
+::-webkit-scrollbar-corner {
+     background-color: #101010 !important;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+
+
+div.pointer{
+    position: relative;
+    animation-name: floater;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+
+@keyframes floater{
+    0% {top: 0}
+    25% {top: 20px}
+    50%{top: 0}
+    75%{top:20px}
+    100%{top: 0}
+}
