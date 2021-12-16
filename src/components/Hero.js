@@ -14,7 +14,7 @@ const HeroSearch = () => {
 
             <Search />
             
-        <div class="h1 text-center mt-3 pt-4 pointer">  <i class="bi bi-chevron-down text-light text-center"></i></div>
+        <div className="h1 text-center mt-3 pt-4 pointer">  <i className="bi bi-chevron-down text-light text-center"></i></div>
       
         </div>
         <figure className="background background-overlay" data-top-top="transform: translateY(0%);" data-top-bottom="transform: translateY(10%);"></figure>

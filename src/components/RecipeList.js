@@ -1,7 +1,9 @@
-import React from 'react'
+import React, {useState, useContext} from 'react'
+import {SearchContext} from '../contexts/SearchContext'
 import Recipe from './Recipe'
 
 const RecipeList = ()  => {
+    const {recipes} = useContext(SearchContext);
     return (
       
  
@@ -13,7 +15,11 @@ const RecipeList = ()  => {
         </div>
       </div>
       <div className="row g-4">
-         <Recipe />
+          {recipes.map(recipe => (  
+            <Recipe 
+           key={recipe.recipe.title}
+           recipe={recipe.recipe}
+          />))}
       </div>
     </div>
   </section>
