@@ -1,4 +1,5 @@
-import React, {useState, useContext} from 'react'
+import React, {useContext} from 'react'
+import {  Link } from 'react-router-dom';
 import {SearchContext} from '../contexts/SearchContext'
 import Recipe from './Recipe'
 
@@ -12,7 +13,11 @@ const RecipeList = ()  => {
       <div className="row align-items-end mb-5">
         <div className="col-lg-8">
           <h2 className="fw-light">Browse over <span className="fw-bold">60k+ Recipes</span> for all kinds of dishes.</h2>
+        
         </div>
+        <div className="col-lg-4">
+        <Link to='/'>  <button type="button" class="btn btn-dark btn-lg rounded-pill">Search <i class="bi bi-search text-light"></i></button></Link>
+          </div>
       </div>
       <div className="row g-4">
           {recipes.map(recipe => (  
