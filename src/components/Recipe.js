@@ -2,7 +2,7 @@ import React from 'react'
 
 
 const Recipe = (props)  => {
-    const {label, calories, image,ingredientLines} = props.recipe;
+    const {recipe:{label, calories, image,ingredientLines}} = props;
     const truncate = (str, n) => {
     return str.length > n ? str.substr(0, n - 1) + "..." : str;
     };
@@ -12,7 +12,7 @@ const Recipe = (props)  => {
         <React.Fragment>
 
                 <div className="col-md-6 col-lg-6 col-xl-6" data-aos="fade-up">
-                <a href="" className="card h-100 bg-dark text-light card-hover-border rounded-pill shadow-lg">
+                <a href="#" className="card h-100 bg-dark text-light card-hover-border rounded-pill shadow-lg">
                   <div className="d-flex align-items-lg-center">
                   <img src={image} className="card-image img-fluid w-30 h-10 rounded-pill" />
                      

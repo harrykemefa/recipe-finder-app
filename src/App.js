@@ -29,7 +29,7 @@ const App = () => {
       const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
       const data = await response.json();
       setRecipes(data.hits);
-      setRedirect(false);
+    
       
     } catch (error) {
       console.error(error.message);
@@ -41,20 +41,19 @@ const App = () => {
   const submitForm = e => {
     e.preventDefault();
     setQuery(search);
-    setRedirect(true);   
-   // setSearch('');
+    setRedirect(!redirect);
   }
 
 
   useEffect(() => {
    getRecipes();
-  }, [query]);
+  }, [query, getRecipes]);
   
   return (
  
     <Router>
     {redirect ? (<Redirect to="/recipes" />) : null}
-    <SearchContext.Provider value={{search, updateSearch, getRecipes, submitForm, recipes}}>
+    <SearchContext.Provider value={{search, updateSearch, getRecipes, submitForm, recipes, setRedirect}}>
     <React.Fragment>
     <Route path='/' exact={true} >
       <Nav />

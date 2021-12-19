@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, {useContext} from 'react'
 import {SearchContext} from '../contexts/SearchContext'
 
  const Search = () => {

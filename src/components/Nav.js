@@ -4,7 +4,7 @@ const Nav = () => {
     return (
         <nav id="mainNav" className="navbar navbar-expand-lg navbar-sticky navbar-dark">
   <div className="container">
-    <a href="./index.html" className="navbar-brand"><h3>foody</h3></a>
+    <a href="#" className="navbar-brand"><h3>foody</h3></a>
 
     
     <ul className="navbar-nav navbar-nav-secondary order-lg-3">
@@ -29,7 +29,7 @@ const Nav = () => {
             Docs
           </a>
           <ul className="dropdown-menu dropdown-menu-detailed" aria-labelledby="navbarDropdown-5">
-            <li><a className="dropdown-item " href="./docs/index.html">
+            <li><a className="dropdown-item " href="#">
                 <span>
                   <i className="bi bi-book"></i>
                   Get Started
@@ -37,7 +37,7 @@ const Nav = () => {
                 </span>
               </a>
             </li>
-            <li><a className="dropdown-item " href="./docs/accordion.html">
+            <li><a className="dropdown-item " href="#">
                 <span>
                   <i className="bi bi-grid"></i>
                   Components
@@ -48,7 +48,7 @@ const Nav = () => {
           </ul>
         </li>
         <li className="nav-item d-lg-none">
-          <a href="https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/" className="nav-link text-primary">Buy Cube</a>
+          <a href="#" className="nav-link text-primary">Get Theme</a>
         </li>
       </ul>
     </div>

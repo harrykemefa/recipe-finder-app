@@ -4,10 +4,11 @@ import {SearchContext} from '../contexts/SearchContext'
 import Recipe from './Recipe'
 
 const RecipeList = ()  => {
-    const {recipes} = useContext(SearchContext);
+    const {recipes, setRedirect} = useContext(SearchContext);
+    setRedirect(false);
     return (
       
- 
+   
   <section className="py-15 py-xl-20 bg-light border-bottom">
     <div className="container foreground">
       <div className="row align-items-end mb-5">
@@ -20,11 +21,14 @@ const RecipeList = ()  => {
           </div>
       </div>
       <div className="row g-4">
-          {recipes.map(recipe => (  
+          {recipes && recipes.map(recipe => (  
             <Recipe 
            key={recipe.recipe.title}
            recipe={recipe.recipe}
           />))}
+
+          {!recipes && <p>No Data Found</p>}
+
       </div>
     </div>
   </section>
